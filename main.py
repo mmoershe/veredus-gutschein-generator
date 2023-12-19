@@ -59,7 +59,7 @@ def generate_image() -> None:
     _, _, amount_width, amount_height = draw.textbbox((0, 0), amount_text, font=amount_font)
     
     draw.text(((image_width-code_width)/2, (image_height-code_height)/2), code, fill='black', font=code_font)
-    draw.text(((image_width-amount_width)/2, 300), amount_text, fill='black', font=amount_font)
+    draw.text(((image_width-amount_width)/2, 500), amount_text, fill='black', font=amount_font)
         
     img.save(OUTPUT_PATH)
 
