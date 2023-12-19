@@ -8,8 +8,10 @@ import sys
 
 POSSIBLE_AMOUNTS: list = [20, 50, 100]
 CURRENT_PATH: str = os.path.dirname(__file__)
-OUTPUT_PATH: str = os.path.join(CURRENT_PATH, "output")
-TEMPLATE_PATH: str = os.path.join(CURRENT_PATH, "template", "template.png")
+OUTPUT_FOLDER_PATH: str = os.path.join(CURRENT_PATH, "output")
+OUTPUT_PATH: str = os.path.join(OUTPUT_FOLDER_PATH, "output.png")
+TEMPLATE_FOLDER_PATH: str = os.path.join(CURRENT_PATH, "template")
+TEMPLATE_PATH: str = os.path.join(TEMPLATE_FOLDER_PATH, "template.png")
 
 
 def generate_paths(paths: list) -> None: 
@@ -45,7 +47,7 @@ def generate_image() -> None:
     
     draw.text((100, 100), code, fill='black')
     
-    img.save(os.path.join(OUTPUT_PATH, "output.png"))
+    img.save(OUTPUT_PATH)
 
 
 if __name__ == "__main__": 
