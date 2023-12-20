@@ -60,7 +60,7 @@ def generate_image() -> None:
     
     draw.text(((image_width-code_width)/2, (image_height-code_height)/2), code, fill='black', font=code_font)
     draw.text(((image_width-amount_width)/2, 500), amount_text, fill='black', font=amount_font)
-        
+
     img.save(OUTPUT_PATH)
 
 
@@ -70,7 +70,7 @@ if __name__ == "__main__":
         print(f"{TEMPLATE_PATH = }")
         sys.exit()
 
-    generate_paths([OUTPUT_PATH])
+    generate_paths([OUTPUT_FOLDER_PATH])
     amount = 0
     # amount: int = get_amount(POSSIBLE_AMOUNTS)
     amount: int = 50 if not amount else amount
