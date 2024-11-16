@@ -2,15 +2,17 @@
 cls
 echo start
 
-set "VENV_NAME=gift-venv"
-
 echo Checking if VENV exists...
-if exist %VENV_NAME% (
+if exist venv (
     echo ...it already exists!
 )   else (
-    echo ...it doesn't exist, venv with the name %VENV_NAME% will be created. Hold on...
-    python -m venv %VENV_NAME%
+    echo ...it doesn't exist, venv will be created. Hold on...
+    python -m venv venv
     rem install requirements.txt stuff
     echo ...Done!
 )
-
+call venv\Scripts\activate
+pip install -r requirements.txt
+pip freeze 
+python main.py 
+pause
