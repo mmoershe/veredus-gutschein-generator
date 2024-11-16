@@ -1,6 +1,5 @@
 @echo off
 cls
-echo start
 
 echo Checking if VENV exists...
 if exist venv (
@@ -11,8 +10,10 @@ if exist venv (
     rem install requirements.txt stuff
     echo ...Done!
 )
+
+echo Activating VENV
 call venv\Scripts\activate
+python.exe -m pip install --upgrade pip 
 pip install -r requirements.txt
 pip freeze 
 python main.py 
-pause
