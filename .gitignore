@@ -1,2 +1,5 @@
-/gift-venv
 /output
+venv
+__pycache__
+DATA.json
+temporary.py
