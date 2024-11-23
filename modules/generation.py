@@ -18,7 +18,7 @@ def generate_gift_card(amount: int, code: str, date: str) -> None:
     _, _, date_width, date_height = draw.textbbox((0, 0), code, font=date_font)
     _, _, amount_width, amount_height = draw.textbbox((0, 0), amount_text, font=amount_font)
     
-    draw.text(((image_width-code_width)/2, 972), code, fill='black', font=code_font)
+    draw.text(((image_width-code_width)/2, 965), code, fill='black', font=code_font)
     draw.text(((image_width-date_width)/2, 1130), date, fill='black', font=date_font)
     draw.text(((image_width-amount_width)/2, 600), amount_text, fill='black', font=amount_font)
 
