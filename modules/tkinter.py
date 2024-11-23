@@ -10,7 +10,7 @@ def ask_for_price_gui() -> int:
     price_value = None
     while True:
         try:
-            price_value = simpledialog.askinteger("Input", "Enter a price (integer):")
+            price_value = simpledialog.askinteger("Input", "Gib den Wert des Geschenkgutscheins als Zahl ein:")
             if price_value is not None:  # Ensure the user didn't cancel
                 break
             else:
