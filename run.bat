@@ -7,7 +7,6 @@ if exist venv (
 )   else (
     echo ...it doesn't exist, venv will be created. Hold on...
     python -m venv venv
-    rem install requirements.txt stuff
     echo ...Done!
 )
 
